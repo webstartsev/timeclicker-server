@@ -6,11 +6,11 @@ const Schema = mongoose.Schema;
   an ID by default to all schemas
 */
 
-const GadgetSchema = new Schema({
-  name: String,
-  release_date: Date,
-  by_company: String,
-  price: Number
+const UserSchema = new Schema({
+  display_name: String,
+  login: String,
+  role: String,
+  avatar: String
 });
 
-module.exports = mongoose.model('Gadget', GadgetSchema);
+module.exports = mongoose.model('User', UserSchema);

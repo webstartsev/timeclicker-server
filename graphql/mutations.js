@@ -1,15 +1,25 @@
 const { GraphQLObjectType, GraphQLString } = require('graphql');
 
-const addGadget = require('./mutations/addGadget');
-const updateGadget = require('./mutations/updateGadget');
-const removeGadget = require('./mutations/removeGadget');
+// Task
+const TaskAdd = require('./mutations/task/add');
+const TaskUpdate = require('./mutations/task/update');
+const TaskRemove = require('./mutations/task/remove');
+
+// User
+const UserAdd = require('./mutations/user/add');
+const UserUpdate = require('./mutations/user/update');
+const UserRemove = require('./mutations/user/remove');
 
 const Mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: {
-    addGadget,
-    updateGadget,
-    removeGadget
+    TaskAdd,
+    TaskUpdate,
+    TaskRemove,
+
+    UserAdd,
+    UserUpdate,
+    UserRemove
   }
 });
 
